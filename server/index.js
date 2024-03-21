@@ -13,7 +13,8 @@ app.use(
     origin: [
       "takeuforward-frontend.vercel.app",
      " takeuforward-frontend-git-main-kushagra-mishras-projects.vercel.app",
-     "takeuforward-frontend-i9y3xackd-kushagra-mishras-projects.vercel.app"
+     "takeuforward-frontend-i9y3xackd-kushagra-mishras-projects.vercel.app",
+     "http://localhost:5173"
     ],
     credentials:true
   })
