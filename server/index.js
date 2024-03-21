@@ -8,7 +8,16 @@ dotenv.config();
 const port = process.env.PORT;
 
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "takeuforward-frontend.vercel.app",
+     " takeuforward-frontend-git-main-kushagra-mishras-projects.vercel.app",
+     "takeuforward-frontend-i9y3xackd-kushagra-mishras-projects.vercel.app"
+    ],
+    credentials:true
+  })
+);
 
 
 app.get("/api/v1/entries",async(req,res)=>{
