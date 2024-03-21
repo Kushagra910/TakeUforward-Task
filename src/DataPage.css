@@ -47,3 +47,12 @@ table th {
 .pagination li.active button {
   background-color: #45a049;
 }
+
+
+@media only screen and (max-width: 600px) {
+  .container {
+    padding: 10px;
+    border-width: 0;
+    overflow: auto; /* Remove border for mobile view */
+  }
+}
