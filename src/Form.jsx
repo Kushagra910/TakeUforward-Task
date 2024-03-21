@@ -61,7 +61,7 @@ function Form() {
     </div>
       <form onSubmit={submitHandler}>
         <div className="form-group">
-          <label htmlFor="name">Username:</label>
+          <label htmlFor="name">UserEmail:</label>
           <input id="name" type="text" name="username" value={data.username} onChange={handleChange} required />
         </div>
 
