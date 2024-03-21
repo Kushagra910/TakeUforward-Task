@@ -3,18 +3,22 @@ import axios from "axios";
 import "./DataPage.css"; // Import CSS file for styling
 import { useNavigate } from "react-router-dom";
 
+
+
 const DataPage = () => {
   const [entries, setEntries] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [entriesPerPage] = useState(5);
   const navigate = useNavigate();
+  const BASE_URL = import.meta.env.VITE_BASE_URL;
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:3000/api/v1/entries"
+          `${BASE_URL}/entries`
         );
+        console.log("FETCH_RESPONSE",response);
         setEntries(response.data.entries);
       } catch (err) {
         console.error("Error fetching entries:", err);
@@ -51,7 +55,7 @@ const DataPage = () => {
               <td>{entry.language}</td>
               <td>{entry.stdInput}</td>
               <td>{entry.createdAt}</td>
-              <td>{entry.sourceCode.slice(0, 100)}</td>
+              <td>{entry?.sourceCode.slice(0, 100)}</td>
             </tr>
           ))}
         </tbody>

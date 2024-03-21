@@ -3,6 +3,7 @@ import "./App.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import {toast} from "react-hot-toast";
+const BASE_URL = import.meta.env.VITE_BASE_URL;
 
 
 function Form() {
@@ -29,7 +30,7 @@ function Form() {
     const toastId = toast.loading("Loading...")
     setLoading(true);
     try{
-      const response = await axios.post("http://localhost:3000/api/v1/submit",data,{
+      const response = await axios.post(`${BASE_URL}/submit`,data,{
         headers: {
           'Content-Type': 'application/json'
         }
