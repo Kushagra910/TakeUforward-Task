@@ -55,7 +55,7 @@ const DataPage = () => {
               <td>{entry.language}</td>
               <td>{entry.stdInput}</td>
               <td>{entry.createdAt}</td>
-              <td>{entry?.sourceCode.slice(0, 100)}</td>
+              <td>{entry?.sourceCode.slice(0, 60)}..</td>
             </tr>
           ))}
         </tbody>

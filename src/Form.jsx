@@ -55,8 +55,10 @@ function Form() {
 
   return (
     <div className="container">
-
+    <div style={{display:"flex", flexDirection:"row", justifyContent:"space-between"}}>
     <h1>TakeUforward</h1>
+    <button onClick={()=>{navigate('/view')}} style={{ padding: "0.8rem 1.5rem",marginBottom:"5px", backgroundColor: "#161816", color: "white", border: "none", borderRadius: "4px", cursor: "pointer"}}>See Details</button>
+    </div>
       <form onSubmit={submitHandler}>
         <div className="form-group">
           <label htmlFor="name">Username:</label>
